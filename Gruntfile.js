@@ -1,0 +1,61 @@
+/**
+ * grunt-pagespeed-ngrok
+ * http://www.jamescryer.com/grunt-pagespeed-ngrok
+ *
+ * Copyright (c) 2014 James Cryer
+ * http://www.jamescryer.com
+ */
+'use strict';
+
+module.exports = function (grunt) {
+
+    // Grunt configuration
+    grunt.initConfig({
+//        pagespeed: {
+//            options: {
+//                nokey: true,
+//                locale: "en_US",
+//                threshold: 90
+//            },
+//            local: {
+//                options: {
+//                    strategy: "desktop"
+//                }
+//            },
+//            mobile: {
+//                options: {
+//                    strategy: "mobile"
+//                }
+//            }
+//        },
+        cssmin: {
+            dist: {
+                options: {
+                    banner: '/*! minified by Scott */'
+                },
+                files: {
+                    'css/styles.min.css': ['css/*.css']
+                }
+            }
+        }
+    });
+
+//    // Register customer task for ngrok
+//    grunt.registerTask('psi-ngrok', 'Run pagespeed with ngrok', function () {
+//        var done = this.async();
+//        var port = 8383;
+//
+//        ngrok.connect(port, function (err, url) {
+//            if (err !== null) {
+//                grunt.fail.fatal(err);
+//                return done();
+//            }
+//            grunt.config.set('pagespeed.options.url', url);
+//            grunt.task.run('pagespeed');
+//            done();
+//        });
+//    });
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    // Register default tasks
+    grunt.registerTask('default', ['cssmin']);
+};
