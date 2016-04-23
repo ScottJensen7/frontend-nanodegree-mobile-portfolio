@@ -17,6 +17,7 @@ To get started, check out the repository, and inspect the code.
 ### Files, Dependencies, and Use
 
 This project depends on the following files and needs a browser to display the index.html page.
+You can also view the site here: http://scottajensen.com/P5/
 
 * `css/print.css`
 * `css/style.css`
@@ -39,9 +40,6 @@ This project depends on the following files and needs a browser to display the i
 * `project-webperf.html`
 * `README.md`
 * `READMEOriginal.md`
-
-#### TODO: add instructions about how all steps necessary to download, configure and implement
-#### the task runner on the reviewer's desktop should be included in the README.md file.
 
 #### Part 1: Optimize PageSpeed Insights score for index.html
 
