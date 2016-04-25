@@ -84,6 +84,9 @@ Ubuntu and that's what works on my PC:
    reload the page, and when the page is done reloading, stop the record timeline button.
 3. Zoom inside the main thread until I find function calls and I look at which code line
    number where they were at to get me a clue about what I need to fix.
+4. In order to only render pizzas that are visible, I changed the function to loop until 
+   the edge of the screen is reached on both the right side and the bottom.
+
 
 To optimize views/pizza.html, I modified views/js/main.js until the frames per second 
 rate is 60 fps or higher. I have found instructive comments in main.js, and added my own
